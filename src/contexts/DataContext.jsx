@@ -2,18 +2,18 @@ import React, { createContext, useContext, useState } from 'react';
 
 const initialData = {
   salaryGrades: [
-    { grade: 'A', units: 0, unitValue: 0, employees: 0 },
-    { grade: 'B', units: 0, unitValue: 0, employees: 0 },
-    { grade: 'C', units: 0, unitValue: 0, employees: 0 },
-    { grade: 'D', units: 0, unitValue: 0, employees: 0 },
-    { grade: 'E', units: 0, unitValue: 0, employees: 0 }
+    { grade: 'A', units: 10, unitValue: 0, employees: 5 },
+    { grade: 'B', units: 8, unitValue: 0, employees: 10 },
+    { grade: 'C', units: 6, unitValue: 0, employees: 15 },
+    { grade: 'D', units: 4, unitValue: 0, employees: 20 },
+    { grade: 'E', units: 2, unitValue: 0, employees: 25 },
   ],
   employeeData: null,
   totalPayout: 0,
   treasuryReserve: 0,
-  profit: 0,
-  reserveRatio: 0,
-  shadowSharesBasePercent: 0,
+  profit: 1000,
+  reserveRatio: 10,
+  shadowSharesBasePercent: 15,
   allocationSummary: '',
   finalResults: null
 };

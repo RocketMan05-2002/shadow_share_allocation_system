@@ -13,16 +13,21 @@ const Configuration = () => {
   const [file, setFile] = useState(null);
 
   useEffect(() => {
-    // Calculate totals when grades change
-    const updatedGrades = localGrades.map(grade => ({
+  setLocalGrades(prevGrades =>
+    prevGrades.map(grade => ({
       ...grade,
       unitValue: valuePerUnit
-    }));
-    const totalPayout = updatedGrades.reduce((sum, grade) => 
-      sum + (grade.units * grade.unitValue * grade.employees), 0
-    );
-    updateAllocationData({ salaryGrades: updatedGrades, totalPayout });
-  }, [localGrades, valuePerUnit, updateAllocationData]);
+    }))
+  );
+}, [valuePerUnit]);
+
+  useEffect(() => {
+  const totalPayout = localGrades.reduce(
+    (sum, grade) => sum + grade.units * grade.unitValue * grade.employees,
+    0
+  );
+  updateAllocationData({ salaryGrades: localGrades, totalPayout });
+}, [localGrades, updateAllocationData]);
 
   const handleGradeChange = (index, field, value) => {
     const newGrades = [...localGrades];
