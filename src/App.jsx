@@ -1,11 +1,11 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Login from './components/Login';
-import Configuration from './components/Configuration';
-import Recommendation from './components/Recommendation';
-import Output from './components/Output';
-import { AuthProvider } from './contexts/AuthContext';
-import { DataProvider } from './contexts/DataContext';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./components/Login";
+import Configuration from "./components/Configuration";
+import Recommendation from "./components/Recommendation";
+import Output from "./components/Output";
+import { AuthProvider } from "./contexts/AuthContext";
+import { DataProvider } from "./contexts/DataContext";
 
 function App() {
   return (
