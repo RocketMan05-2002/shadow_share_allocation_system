@@ -34,8 +34,9 @@ const Login = () => {
     <div className="min-h-screen flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md">
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-4">
-            <Building2 className="w-8 h-8 text-indigo-600" />
+          <div className="inline-flex items-center justify-center w-44 h-20 bg-indigo-100 rounded-full mb-4">
+            {/* <Building2 className="w-8 h-8 text-indigo-600" /> */}
+            <img src={"/image.png"} alt='' className='w-[60%] h-[100%] text-indigo-600' />
           </div>
           <h1 className="text-2xl font-bold text-gray-900">Shadow Share Portal</h1>
           <p className="text-gray-600 mt-2">Access your allocation dashboard</p>
